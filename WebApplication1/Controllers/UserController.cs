@@ -46,7 +46,7 @@ namespace WebApplication1.Controllers
         public IActionResult PutStudent(int id, Users user)
         {
             if (!_context.Users.Any(data => data.Id == id))
-                return BadRequest("User Detail not found for " + id);
+                return BadRequest("User Details not found for " + id);
 
             _context.Entry(user).State = EntityState.Modified;
             _context.SaveChanges();
